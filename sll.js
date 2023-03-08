@@ -41,12 +41,25 @@ class SLL {
     console.log(this.head.value);
     return this.head.value;
   }
+
+  //   display
+  display() {
+    let currentNode = this.head;
+    let output = "";
+    while (currentNode) {
+      output += currentNode.value + " ";
+      currentNode = currentNode.next;
+    }
+    console.log(output.trim());
+    return output.trim();
+  }
 }
 
-const sll = new SLL();
-sll.addFront(1);
-sll.addFront(2);
-sll.addFront(3);
-sll.addFront(4);
-sll.removeFront();
-sll.front();
+const myList = new SLL();
+myList.addFront(1);
+myList.addFront(2);
+myList.addFront(3);
+myList.addFront(4);
+myList.removeFront();
+myList.front();
+myList.display();
